@@ -1,0 +1,6 @@
+html {
+  background-color: darken(slategrey, 40%);
+  p {
+    color: lighten($color: lightseagreen, $amount: 5%);
+  }
+}
