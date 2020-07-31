@@ -1,12 +1,8 @@
-const config = require("./webpack.config");
-const TerserPlugin = require("terser-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const config = require('./webpack.config');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   ...config,
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-  },
+  mode: 'production',
   plugins: [...(config.plugins || []), new CleanWebpackPlugin()],
 };
